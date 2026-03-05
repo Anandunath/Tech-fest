@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-blue: #00f0ff;
+  --neon-violet: #7b2fff;
+  --neon-green: #00ff88;
+  --dark-bg: #0a0a0f;
+  --dark-surface: #12121a;
+  --dark-card: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --font-space-grotesk: 'Space Grotesk', system-ui, sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+@layer utilities {
+  .neon-glow-blue {
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff40, 0 0 40px #00f0ff20;
+  }
+  .neon-glow-violet {
+    box-shadow: 0 0 10px #7b2fff, 0 0 20px #7b2fff40, 0 0 40px #7b2fff20;
+  }
+  .neon-glow-red {
+    box-shadow: 0 0 10px #ff3030, 0 0 20px #ff303040, 0 0 40px #ff303020;
+  }
+  .text-gradient-blue-violet {
+    background: linear-gradient(135deg, #00f0ff, #7b2fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glassmorphism {
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+  }
+}
